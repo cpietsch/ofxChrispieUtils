@@ -113,7 +113,7 @@ public:
 		
 		gui->addTitle("Particles");
 		gui->addSlider("Line BirdgeSize", lineBridgeSize, 0, 50); 
-		gui->addSlider("Line PosX", linePosY, 0, height); 
+		gui->addSlider("Line PosY", linePosY, 0, height);
 		gui->addSlider("Animated PosX", aniLPposX, 0, width); 
 		gui->addSlider("Animated Speed", aniSpeed, 0, 50); 
 		gui->addSlider("Steps", lpSteps, 0, 20); 
@@ -165,14 +165,15 @@ public:
 								 lineParticles[middleParticlePos-lineBridgeSize]->getPosition().y
 								 ));
 		
-		bridge.bezierTo(lineParticles[middleParticlePos-lineBridgeSize]->getPosition().x,
-						 lineParticles[middleParticlePos-lineBridgeSize]->getPosition().y,
-						 lineParticles[middleParticlePos-1]->getPosition().x,
-						 lineParticles[middleParticlePos-1]->getPosition().y,
-						 lineParticles[middleParticlePos+lineBridgeSize+1]->getPosition().x,
-						 lineParticles[middleParticlePos+lineBridgeSize+1]->getPosition().y,
-						 lineBridgeSize/lpSteps // TODO
-						);
+		float  x1 = lineParticles[middleParticlePos-lineBridgeSize]->getPosition().x;
+		float  y1 = lineParticles[middleParticlePos-lineBridgeSize]->getPosition().y;
+		float  x2 = lineParticles[middleParticlePos-1]->getPosition().x;
+		float  y2 = lineParticles[middleParticlePos-1]->getPosition().y;
+		float  x3 = lineParticles[middleParticlePos+lineBridgeSize+1]->getPosition().x;
+		float  y3 = lineParticles[middleParticlePos+lineBridgeSize+1]->getPosition().y;
+		float  res = lineBridgeSize/lpSteps ;
+
+		bridge.bezierTo(x1,y1,x2,y2,x3,y3,res);
 		
 		bridge.addVertex(ofPoint(lineParticles[middleParticlePos+lineBridgeSize]->getPosition().x,
 								 lineParticles[middleParticlePos+lineBridgeSize]->getPosition().y
@@ -188,14 +189,14 @@ public:
 				
 				if(!added){
 					for(int a=0; a<bridge.size(); a++) {
-						line.push_back(ofPoint(bridge[a].x,bridge[a].y));
+						line.push_back(ofPoint(bridge[a].x,bridge[a].y- linePosY));
 					}
 					added=true;
 				}
 				
 				
 			} else {
-				line.push_back(ofPoint(lineParticles[i]->getPosition().x,lineParticles[i]->getPosition().y));
+				line.push_back(ofPoint(lineParticles[i]->getPosition().x,lineParticles[i]->getPosition().y- linePosY));
 			}
 		}
 		
