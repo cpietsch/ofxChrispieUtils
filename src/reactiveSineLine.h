@@ -113,7 +113,7 @@ public:
 		
 		gui->addTitle("Particles");
 		gui->addSlider("Line BirdgeSize", lineBridgeSize, 0, 50); 
-		gui->addSlider("Line PosY", linePosY, 0, height);
+		//gui->addSlider("Line PosY", linePosY, 0, height);
 		gui->addSlider("Animated PosX", aniLPposX, 0, width); 
 		gui->addSlider("Animated Speed", aniSpeed, 0, 50); 
 		gui->addSlider("Steps", lpSteps, 0, 20); 

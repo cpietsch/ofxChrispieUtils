@@ -210,7 +210,8 @@
 		BF278C2E14706B4C005A3A0E /* ofxCvShortImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxCvShortImage.cpp; path = Applications/OF/of_preRelease_v007_osx/addons/ofxOpenCv/src/ofxCvShortImage.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		BF278C2F14706B4C005A3A0E /* ofxCvShortImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxCvShortImage.h; path = Applications/OF/of_preRelease_v007_osx/addons/ofxOpenCv/src/ofxCvShortImage.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		BF278C3014706B4C005A3A0E /* ofxOpenCv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxOpenCv.h; path = Applications/OF/of_preRelease_v007_osx/addons/ofxOpenCv/src/ofxOpenCv.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
-		BF3831F2147984260048C117 /* reactiveSineLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = reactiveSineLine.h; path = Applications/OF/of_preRelease_v007_osx/addons/ofxChrispieUtils/scr/reactiveSineLine.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		BF4563BE147D8D31000A78B4 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Readme.txt; path = Applications/OF/of_preRelease_v007_osx/addons/ofxChrispieUtils/Readme.txt; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		BF4563C0147D8D31000A78B4 /* reactiveSineLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = reactiveSineLine.h; path = Applications/OF/of_preRelease_v007_osx/addons/ofxChrispieUtils/src/reactiveSineLine.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		BF8A1B7B1475952F00C1692B /* changelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = changelog.txt; path = Applications/OF/of_preRelease_v007_osx/addons/ofxSimpleGuiToo/changelog.txt; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		BF8A1B831475952F00C1692B /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = install.xml; path = Applications/OF/of_preRelease_v007_osx/addons/ofxSimpleGuiToo/install.xml; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		BF8A1B841475952F00C1692B /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = Applications/OF/of_preRelease_v007_osx/addons/ofxSimpleGuiToo/LICENSE.txt; sourceTree = SYSTEM_DEVELOPER_DIR; };
@@ -311,7 +312,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				BF3831EF147984260048C117 /* ofxChrispieUtils */,
+				BF45622C147D8D30000A78B4 /* ofxChrispieUtils */,
 				BF8A1BD21475975000C1692B /* ofxXmlSettings */,
 				BF8A1BC01475974300C1692B /* ofxMSAInteractiveObject */,
 				BF8A1B7A1475952F00C1692B /* ofxSimpleGuiToo */,
@@ -719,22 +720,23 @@
 			path = Applications/OF/of_preRelease_v007_osx/addons/ofxOpenCv/src;
 			sourceTree = SYSTEM_DEVELOPER_DIR;
 		};
-		BF3831EF147984260048C117 /* ofxChrispieUtils */ = {
+		BF45622C147D8D30000A78B4 /* ofxChrispieUtils */ = {
 			isa = PBXGroup;
 			children = (
-				BF3831F1147984260048C117 /* scr */,
+				BF4563BE147D8D31000A78B4 /* Readme.txt */,
+				BF4563BF147D8D31000A78B4 /* src */,
 			);
 			name = ofxChrispieUtils;
 			path = Applications/OF/of_preRelease_v007_osx/addons/ofxChrispieUtils;
 			sourceTree = SYSTEM_DEVELOPER_DIR;
 		};
-		BF3831F1147984260048C117 /* scr */ = {
+		BF4563BF147D8D31000A78B4 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				BF3831F2147984260048C117 /* reactiveSineLine.h */,
+				BF4563C0147D8D31000A78B4 /* reactiveSineLine.h */,
 			);
-			name = scr;
-			path = Applications/OF/of_preRelease_v007_osx/addons/ofxChrispieUtils/scr;
+			name = src;
+			path = Applications/OF/of_preRelease_v007_osx/addons/ofxChrispieUtils/src;
 			sourceTree = SYSTEM_DEVELOPER_DIR;
 		};
 		BF8A1B7A1475952F00C1692B /* ofxSimpleGuiToo */ = {

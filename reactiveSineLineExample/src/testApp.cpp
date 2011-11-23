@@ -20,13 +20,16 @@ ofSoundStream soundStream;
 
 reactiveSineLine sineLine;
 
+int linePosY;
+
 
 //--------------------------------------------------------------
 void testApp::setup(){
 	ofBackground(255, 255, 255);
 	ofSetVerticalSync(true);
 	ofSetFrameRate(60);
-
+	
+	linePosY=ofGetHeight()/2;
 	
 	sineLine.setup();
 	
@@ -68,6 +71,9 @@ void testApp::draw(){
 	ofBackground(255, 255, 255);
 	ofSetColor(100, 200, 100,100);
 	
+	ofPushMatrix();
+	ofTranslate(0, linePosY, 0);
+	
 	//sineLine.draw();
 	
 	vector<ofPoint>& points= sineLine.getLine();
@@ -75,6 +81,18 @@ void testApp::draw(){
 	for (int i=0; i<points.size(); i++) {
 		ofRect(points[i].x, points[i].y,2,2);
 	}
+	
+	// Cheese demo for lokal maxima/minima
+	ofSetColor(200, 200, 0,100);
+	for (int i=0; i<points.size(); i++) {
+		if(i>0 && i<points.size()-1) {
+			if(abs(points[i-1].y) < abs(points[i].y) && abs(points[i+1].y) < abs(points[i].y)) {
+				ofRect(points[i].x, points[i].y,5,5);
+			}
+		}
+	}
+	
+	ofPopMatrix();
 	
 	gui.draw();
 }
